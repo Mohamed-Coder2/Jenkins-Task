@@ -6,8 +6,9 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Mohamed-Coder2/Jenkins-Task'
             }
         }
-        stage('Execute Bash Script') {
+        stage('Execute Script') {
             steps {
+                sh 'chmod +x script.sh'
                 sh './script.sh'
             }
         }
